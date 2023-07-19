@@ -23,18 +23,20 @@
 						sec = arr[i];
 					}
 				}
-			if(arr.length ==0 || arr.length == 1|| sec == max)
-				return -Infinity;
+			if(arr.length ==0 || arr.length == 1||
+			   sec == max || sec ==Number.MIN_SAFE_INTEGER)
+				return '-Infinity';
+	
 			return sec;
 		}
 
-	//	function Main() {
+		function Main() {
 			var n = prompt("Enter the number of elements");
 			var arr = [];
 			for (var i = 0; i < n; i++) {
 				arr[i] = prompt("Enter element " + (i+1));
 			}
-			//alert(secondHighest(arr));
+			alert(secondHighest(arr));
 		}
 		Main();
 	</script>
